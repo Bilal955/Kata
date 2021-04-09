@@ -1,0 +1,25 @@
+{
+  "header": {
+    "title": "My Video Club"
+  },
+  "movie": {
+    "filter": "Filter",
+    "name": "Movie name",
+    "column": {
+      "tconst": "Reference",
+      "primaryTitle": "Title",
+      "titleType": "Type",
+      "originalTitle": "Original title",
+      "isAdult": "Adult",
+      "startYear": "Start year",
+      "endYear": "End year",
+      "runtimeMinutes": "Runtime (minutes)",
+      "genres": "Genres"
+    },
+    "popup": {
+      "title": "Modify movie",
+      "save": "Save",
+      "cancel": "Cancel"
+    }
+  }
+}

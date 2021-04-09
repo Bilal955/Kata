@@ -1,0 +1,71 @@
+<ng-container *ngIf="getForm() | async as globalForm">
+  <form class="form" novalidate [formGroup]="globalForm">
+    <mat-form-field class="full-width">
+      <input matInput disabled value="{{ 'movie.popup.title' | translate }}">
+    </mat-form-field>
+
+    <tab formGroupName="movie">
+      <!-- Reference label -->
+      <mat-form-field class="full-width hide-on-mobile">
+        <mat-label>{{ 'movie.column.tconst' | translate }}</mat-label>
+        <input matInput name="tconst" formControlName="tconst">
+      </mat-form-field>
+
+      <!-- Type label -->
+      <mat-form-field class="full-width hide-on-mobile">
+        <mat-label>{{ 'movie.column.titleType' | translate }}</mat-label>
+        <input matInput name="titleType" formControlName="titleType">
+      </mat-form-field>
+
+      <!-- Title label -->
+      <mat-form-field class="full-width">
+        <mat-label>{{ 'movie.column.primaryTitle' | translate }}</mat-label>
+        <textarea matInput name="primaryTitle" formControlName="primaryTitle"></textarea>
+      </mat-form-field>
+
+      <!-- Original Title label -->
+      <mat-form-field class="full-width hide-on-mobile">
+        <mat-label>{{ 'movie.column.originalTitle' | translate }}</mat-label>
+        <textarea matInput name="originalTitle" formControlName="originalTitle"></textarea>
+      </mat-form-field>
+
+      <!-- Genres label -->
+      <mat-form-field class="full-width">
+        <mat-label>{{ 'movie.column.genres' | translate }}</mat-label>
+        <textarea matInput name="genres" formControlName="genres"></textarea>
+      </mat-form-field>
+
+      <!-- Start year label -->
+      <mat-form-field class="full-width">
+        <mat-label>{{ 'movie.column.startYear' | translate }}</mat-label>
+        <input matInput type="text" name="startYear" formControlName="startYear">
+      </mat-form-field>
+
+      <!-- End year label -->
+      <mat-form-field class="full-width hide-on-mobile">
+        <mat-label>{{ 'movie.column.endYear' | translate }}</mat-label>
+        <input matInput name="endYear" formControlName="endYear">
+      </mat-form-field>
+
+      <!-- Adult label -->
+      <mat-form-field class="full-width hide-on-mobile">
+        <mat-label>{{ 'movie.column.isAdult' | translate }}</mat-label>
+        <mat-select name="isAdult" formControlName="isAdult" >
+          <mat-option value="{{movie.isAdult}}">{{movie.isAdult}}</mat-option>
+          <mat-option value="{{!movie.isAdult}}">{{!movie.isAdult}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Runtime minutes label -->
+      <mat-form-field class="full-width hide-on-mobile">
+        <mat-label>{{ 'movie.column.runtimeMinutes' | translate }}</mat-label>
+        <input matInput numeric name="runtimeMinutes" formControlName="runtimeMinutes">
+      </mat-form-field>
+    </tab>
+  </form>
+
+  <mat-dialog-actions align="end">
+    <button mat-button [disabled]="globalForm.invalid" cdkFocusInitial (click)="save()">{{ 'movie.popup.save' | translate }}</button>
+    <button mat-button mat-dialog-close>{{ 'movie.popup.cancel' | translate }}</button>
+  </mat-dialog-actions>
+</ng-container>

@@ -1,0 +1,25 @@
+{
+  "header": {
+    "title": "Mon Vidéo Club"
+  },
+  "movie": {
+    "filter": "Filtrer",
+    "name": "Nom du film",
+    "column": {
+      "tconst": "Reference",
+      "primaryTitle": "Titre",
+      "titleType": "Type",
+      "originalTitle": "Titre original",
+      "isAdult": "Adulte",
+      "startYear": "Année début",
+      "endYear": "Année fin",
+      "runtimeMinutes": "Durée (minutes)",
+      "genres": "Genres"
+    },
+    "popup": {
+      "title": "Modifier un film",
+      "save": "Modifier",
+      "cancel": "Annuler"
+    }
+  }
+}

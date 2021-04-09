@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span>{{ 'header.title' | translate }}</span>
+  <span class="example-spacer"></span>
+  <span class="spacer"></span>
+  <ng-container>
+    <mat-icon>language</mat-icon>
+    <button mat-button [matMenuTriggerFor]="menu">
+      {{siteLanguage}}
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a mat-menu-item (click)="changeLanguage('EN')">English</a>
+      <a mat-menu-item (click)="changeLanguage('FR')">Français</a>
+    </mat-menu>
+  </ng-container>
+</mat-toolbar>

@@ -1,0 +1,33 @@
+table {
+  width: 100%;
+}
+
+.filter-alignment {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-row:hover {
+  cursor: pointer;
+  background: #b4b4b433;
+}
+
+.short-fixed-content {
+  width: 5%;
+}
+
+.large-fixed-content {
+  width: 15%;
+}
+
+@media screen and (max-width: 980px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}

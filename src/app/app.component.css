@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-row:hover {
+  cursor: pointer;
+  background: #b4b4b433;
+}
+
+@media screen and (max-width: 960px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
