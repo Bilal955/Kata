@@ -17,3 +17,7 @@ td {
     display: none;
   }
 }
+
+.mat-dialog-container {
+  height: initial;
+}
